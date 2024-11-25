@@ -8,10 +8,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.7",
-    "eslint": "^9.15.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^7.0.1",
+    "react-router": "^6.28.0",
+    "react-router-dom": "^6.28.0",
     "react-scripts": "^3.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -22,11 +21,9 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.2.0"
   },
   "browserslist": {
     "production": [
@@ -39,9 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.2.0"
   }
 }
