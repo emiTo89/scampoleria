@@ -12,29 +12,28 @@ const EditProductComponent = () => {
 
   const params = useParams();
 
-  const getProductById = async () => {
-    try {
-      const response = await axios.get(
-        `http://localhost:8081/getProduct?productId=${params.id}`
-      );
-
-      if (response) {
-        setTitle(response.data.title);
-        setPrice(response.data.price);
-        setQuantity(response.data.quantity);
-      }
-    } catch (err) {
-      console.log(err);
-
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
+    const getProductById = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:8081/getProduct?productId=${params.id}`
+        );
+
+        if (response) {
+          setTitle(response.data.title);
+          setPrice(response.data.price);
+          setQuantity(response.data.quantity);
+        }
+      } catch (err) {
+        console.log(err);
+
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
     getProductById();
-  });
+  }, [params]);
 
   console.log(error, loading);
 
