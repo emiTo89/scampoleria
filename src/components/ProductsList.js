@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { redirect } from 'react-router';
+import { useNavigate } from 'react-router';
 
 const ProductsList = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate();
   const getProducts = async () => {
     console.log('response');
     try {
@@ -41,7 +41,7 @@ const ProductsList = () => {
   console.log(error);
 
   const goToEditPage = (id) => {
-    redirect(`/edit-product/${id}`);
+    navigate(`/edit-product/${id}`);
   };
 
   return (
