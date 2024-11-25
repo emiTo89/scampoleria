@@ -23,7 +23,7 @@ const ProductsList = () => {
 
   const removeProduct = async (id) => {
     try {
-      await axios.post(`http://localhost:8081/delete-product/${id}`);
+      await axios.post(`http://192.168.1.106:8081/delete-product/${id}`);
       getProducts();
     } catch (err) {
       console.log(err);

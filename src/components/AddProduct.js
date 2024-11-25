@@ -13,11 +13,14 @@ const AddProduct = () => {
   const addProduct = async () => {
     console.log('response');
     try {
-      const response = await axios.post('http://localhost:8081/add-product', {
-        title: title,
-        price: price,
-        quantity: quantity,
-      });
+      const response = await axios.post(
+        'http://192.168.1.106:8081/add-product',
+        {
+          title: title,
+          price: price,
+          quantity: quantity,
+        }
+      );
       setData(response.data);
     } catch (err) {
       console.log(err);

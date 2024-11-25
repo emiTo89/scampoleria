@@ -38,12 +38,15 @@ const EditProductComponent = () => {
 
   const editProduct = async () => {
     try {
-      const response = await axios.post('http://localhost:8081/edit-product', {
-        id: params.id,
-        title: title,
-        price: price,
-        quantity: quantity,
-      });
+      const response = await axios.post(
+        'http://192.168.1.106:8081/edit-product',
+        {
+          id: params.id,
+          title: title,
+          price: price,
+          quantity: quantity,
+        }
+      );
       console.log('====================================');
       console.log(response);
       console.log('====================================');
