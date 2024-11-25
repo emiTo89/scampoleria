@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a6858c30f56cbfa76646fa95f64c5b06",
+    "revision": "ab47ddc05c2170946c61828bd8b8d3e6",
     "url": "/scampoleria/index.html"
   },
   {
-    "revision": "09cc7e74575890cf698f",
+    "revision": "0e10a50758f874581493",
     "url": "/scampoleria/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/scampoleria/static/js/2.dbaaaa77.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "09cc7e74575890cf698f",
-    "url": "/scampoleria/static/js/main.6a9ef8b7.chunk.js"
+    "revision": "0e10a50758f874581493",
+    "url": "/scampoleria/static/js/main.32f8c7f9.chunk.js"
   },
   {
     "revision": "e1c6f2241b32dfc468fa",
