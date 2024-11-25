@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/scampoleria/static/css/main.f855e6bc.css",
-    "main.js": "/scampoleria/static/js/main.bc3c98d9.js",
+    "main.js": "/scampoleria/static/js/main.b94594cd.js",
     "static/js/453.83197c8b.chunk.js": "/scampoleria/static/js/453.83197c8b.chunk.js",
     "static/media/logo.svg": "/scampoleria/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/scampoleria/index.html",
     "main.f855e6bc.css.map": "/scampoleria/static/css/main.f855e6bc.css.map",
-    "main.bc3c98d9.js.map": "/scampoleria/static/js/main.bc3c98d9.js.map",
+    "main.b94594cd.js.map": "/scampoleria/static/js/main.b94594cd.js.map",
     "453.83197c8b.chunk.js.map": "/scampoleria/static/js/453.83197c8b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.bc3c98d9.js"
+    "static/js/main.b94594cd.js"
   ]
 }
