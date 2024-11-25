@@ -10,7 +10,9 @@ const ProductsList = () => {
   const getProducts = async () => {
     console.log('response');
     try {
-      const response = await axios.get('http://localhost:8081/get-products');
+      const response = await axios.get(
+        'http://192.168.1.106:8081/get-products'
+      );
       setData(response.data);
     } catch (err) {
       console.log(err);
