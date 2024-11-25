@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/scampoleria/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/scampoleria/static/js/main.cd906cce.chunk.js",
-    "main.js.map": "/scampoleria/static/js/main.cd906cce.chunk.js.map",
+    "main.js": "/scampoleria/static/js/main.32f8c7f9.chunk.js",
+    "main.js.map": "/scampoleria/static/js/main.32f8c7f9.chunk.js.map",
     "runtime-main.js": "/scampoleria/static/js/runtime-main.938945bd.js",
     "runtime-main.js.map": "/scampoleria/static/js/runtime-main.938945bd.js.map",
     "static/js/2.dbaaaa77.chunk.js": "/scampoleria/static/js/2.dbaaaa77.chunk.js",
     "static/js/2.dbaaaa77.chunk.js.map": "/scampoleria/static/js/2.dbaaaa77.chunk.js.map",
     "index.html": "/scampoleria/index.html",
-    "precache-manifest.fbedf725a89ff75033804652d881d03c.js": "/scampoleria/precache-manifest.fbedf725a89ff75033804652d881d03c.js",
+    "precache-manifest.74851f71b275e30d0a7e2c762ac86f5d.js": "/scampoleria/precache-manifest.74851f71b275e30d0a7e2c762ac86f5d.js",
     "service-worker.js": "/scampoleria/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/scampoleria/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.dbaaaa77.chunk.js.LICENSE.txt": "/scampoleria/static/js/2.dbaaaa77.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.938945bd.js",
     "static/js/2.dbaaaa77.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.cd906cce.chunk.js"
+    "static/js/main.32f8c7f9.chunk.js"
   ]
 }
