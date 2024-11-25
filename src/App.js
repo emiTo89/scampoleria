@@ -15,7 +15,7 @@ function App() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Prova react
+          Prova react 1
         </a>
       </header>
     </div>
