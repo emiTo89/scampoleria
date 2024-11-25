@@ -11,7 +11,7 @@ const ProductsList = () => {
     console.log('response');
     try {
       const response = await axios.get(
-        'https://192.168.1.106:8081/get-products'
+        'http://192.168.1.106:8081/get-products'
       );
       setData(response.data);
     } catch (err) {
@@ -25,7 +25,7 @@ const ProductsList = () => {
 
   const removeProduct = async (id) => {
     try {
-      await axios.post(`https://192.168.1.106:8081/delete-product/${id}`);
+      await axios.post(`http://192.168.1.106:8081/delete-product/${id}`);
       getProducts();
     } catch (err) {
       console.log(err);

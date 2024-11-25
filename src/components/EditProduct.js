@@ -15,7 +15,7 @@ const EditProductComponent = () => {
   const getProductById = async () => {
     try {
       const response = await axios.get(
-        `https://localhost:8081/getProduct?productId=${params.id}`
+        `http://localhost:8081/getProduct?productId=${params.id}`
       );
 
       if (response) {
@@ -39,7 +39,7 @@ const EditProductComponent = () => {
   const editProduct = async () => {
     try {
       const response = await axios.post(
-        'https://192.168.1.106:8081/edit-product',
+        'http://192.168.1.106:8081/edit-product',
         {
           id: params.id,
           title: title,
