@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router';
 
@@ -32,9 +32,9 @@ const EditProductComponent = () => {
     }
   };
 
-  useEffect(() => {
-    getProductById();
-  }, []);
+  getProductById();
+
+  console.log(error, loading);
 
   const editProduct = async () => {
     try {

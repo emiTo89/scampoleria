@@ -38,6 +38,8 @@ const ProductsList = () => {
     getProducts();
   }, []);
 
+  console.log(error);
+
   const goToEditPage = (id) => {
     redirect(`/edit-product/${id}`);
   };

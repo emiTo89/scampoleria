@@ -32,6 +32,8 @@ const AddProduct = () => {
     return title && price && quantity ? false : true;
   };
 
+  console.log(data, error, loading);
+
   return (
     <div
       style={{
