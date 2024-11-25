@@ -14,7 +14,7 @@ const AddProduct = () => {
     console.log('response');
     try {
       const response = await axios.post(
-        'http://192.168.1.106:8081/add-product',
+        'https://192.168.1.106:8081/add-product',
         {
           title: title,
           price: price,
