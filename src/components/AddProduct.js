@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import apiRequest from '../api';
+import endpoints from '../api/endpoints/endpoints';
 
 const AddProduct = () => {
   const [data, setData] = useState(null);
@@ -11,14 +12,13 @@ const AddProduct = () => {
   const [quantity, setQuantity] = useState(null);
 
   const addProduct = async () => {
-    console.log('response');
     try {
-      const response = await axios.post('http://localhost:8081/add-product', {
+      const response = await apiRequest('POST', endpoints.addProduct, {
         title: title,
         price: price,
         quantity: quantity,
       });
-      setData(response.data);
+      setData(response);
     } catch (err) {
       console.log(err);
 

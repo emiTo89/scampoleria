@@ -1,32 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import AddProduct from './components/AddProduct';
+import ProductsList from './components/ProductsList';
+import EditProduct from './components/EditProduct';
+import AuthPage from './components/AuthPage';
+import NoMatch from './components/NoMatch';
+import { ProtectedRoute } from './components/ProtectedRoute';
 
-const App = ({ children }) => {
+const App = () => {
   return (
     <div className='App'>
-      <nav
-        style={{
-          widht: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'flex-start',
-          padding: '1rem',
-        }}
-      >
-        <Link
-          style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}
-          to={'/products'}
-        >
-          See products
-        </Link>
-        <Link
-          style={{ textDecoration: 'none', color: '#000', marginRight: '1rem' }}
-          to={'/'}
-        >
-          Home
-        </Link>
-      </nav>
-      {children}
+      <Router>
+        <Routes>
+          <Route path='/auth' element={<AuthPage />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path='/add-product' element={<AddProduct />} />
+            <Route path='/products' element={<ProductsList />} />
+            <Route path='/edit-product/:id' element={<EditProduct />} />
+          </Route>
+          <Route path='*' element={<NoMatch />} />
+        </Routes>
+      </Router>
     </div>
   );
 };

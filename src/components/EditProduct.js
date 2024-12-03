@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useParams } from 'react-router';
+import apiRequest from '../api';
+import endpoints from '../api/endpoints/endpoints';
 
 const EditProductComponent = () => {
   const [error, setError] = useState(false);
@@ -15,8 +16,9 @@ const EditProductComponent = () => {
   useEffect(() => {
     const getProductById = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8081/getProduct?productId=${params.id}`
+        const response = await apiRequest(
+          'GET',
+          `${endpoints.getProductById}${params.id}`
         );
 
         if (response) {
@@ -39,15 +41,13 @@ const EditProductComponent = () => {
 
   const editProduct = async () => {
     try {
-      const response = await axios.post('http://localhost:8081/edit-product', {
+      const response = await apiRequest('POST', endpoints.editProduct, {
         id: params.id,
         title: title,
         price: price,
         quantity: quantity,
       });
-      console.log('====================================');
       console.log(response);
-      console.log('====================================');
     } catch (err) {
       console.log(err);
 

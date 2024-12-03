@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router';
+import apiRequest from '../api';
+import endpoints from '../api/endpoints/endpoints';
 
 const ProductsList = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
   const getProducts = async () => {
-    console.log('response');
     try {
-      const response = await axios.get('http://localhost:8081/get-products');
-      setData(response.data);
+      const response = await apiRequest('GET', endpoints.getProducts);
+      console.log(response);
+      setData(response);
     } catch (err) {
       console.log(err);
-
+      console.log(error);
       setError(err.message);
     } finally {
       setLoading(false);
@@ -23,7 +25,7 @@ const ProductsList = () => {
 
   const removeProduct = async (id) => {
     try {
-      await axios.post(`http://localhost:8081/delete-product/${id}`);
+      await apiRequest('GET', `${endpoints.deleteProduct}?id=${id}`);
       getProducts();
     } catch (err) {
       console.log(err);
@@ -37,8 +39,6 @@ const ProductsList = () => {
   useEffect(() => {
     getProducts();
   }, []);
-
-  console.log(error);
 
   const goToEditPage = (id) => {
     navigate(`/edit-product/${id}`);
