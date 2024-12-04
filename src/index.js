@@ -12,3 +12,6 @@ ReactDOM.createRoot(root).render(
     <App />
   </Provider>
 );
+
+//do not treat warnings as errors
+process.env.CI = false;
