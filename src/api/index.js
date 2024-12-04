@@ -37,7 +37,12 @@ const apiRequest = async (method, url, data = null, headers = {}) => {
     console.error('API Error:', error);
 
     if (error.status === 403 || error.status === 401) {
-      window.location = '/scampoleria/auth';
+      console.log(window.location);
+      if (window.location.href.startsWith('http://localhost')) {
+        window.location = '/scampoleria/auth';
+      } else {
+        window.location = 'https://emito89.github.io/scampoleria/auth';
+      }
     }
 
     return {
@@ -57,9 +62,16 @@ apiClient.interceptors.response.use(
     if (error.response && error.response.status === 400) {
       console.error('Bad request:', error);
     }
-    if (error.response && error.response.status === 403) {
+    if (
+      (error.response && error.response.status === 403) ||
+      (error.response && error.response.status === 401)
+    ) {
       console.log('Unauthorized access, redirecting...');
-      window.location = '/scampoleria/auth'; // Example: Redirect to login page
+      if (window.location.href.startsWith('http://localhost')) {
+        window.location = '/scampoleria/auth';
+      } else {
+        window.location = 'https://emito89.github.io/scampoleria/auth';
+      }
     }
     if (error.response && error.response.status === 404) {
       console.log('Url not exist');
