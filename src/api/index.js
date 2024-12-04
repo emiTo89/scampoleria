@@ -41,7 +41,7 @@ const apiRequest = async (method, url, data = null, headers = {}) => {
       if (window.location.href.startsWith('http://localhost')) {
         window.location = '/scampoleria/auth';
       } else {
-        window.location = 'https://emito89.github.io/scampoleria/auth';
+        window.location = 'https://emito89.github.io/scampoleria';
       }
     }
 
@@ -70,7 +70,7 @@ apiClient.interceptors.response.use(
       if (window.location.href.startsWith('http://localhost')) {
         window.location = '/scampoleria/auth';
       } else {
-        window.location = 'https://emito89.github.io/scampoleria/auth';
+        window.location = 'https://emito89.github.io/scampoleria';
       }
     }
     if (error.response && error.response.status === 404) {
