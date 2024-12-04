@@ -53,18 +53,25 @@ const ProductsList = () => {
             width: '100%',
             display: 'flex',
             justifyContent: 'center',
+            alignItems: 'center',
             margin: '2rem',
           }}
         >
-          <ul>
+          <ul
+            style={{
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
             {data?.map((product) => {
               return (
                 <li
                   style={{
                     listStyle: 'none',
-                    borderBottom: '1px solid gray',
-                    width: '100%',
                   }}
+                  className='productCard'
                   key={product.id}
                 >
                   <div
@@ -74,31 +81,24 @@ const ProductsList = () => {
                       width: '100%',
                     }}
                   >
-                    <div
-                      style={{
-                        marginLeft: '10rem',
-                        marginTop: '0.5rem',
-                        cursor: 'pointer',
-                      }}
-                      onClick={() => goToEditPage(product.id)}
-                    >
+                    <button onClick={() => goToEditPage(product.id)}>
                       EDIT
-                    </div>
-                    <div
-                      style={{
-                        marginLeft: '10rem',
-                        marginTop: '0.5rem',
-                        cursor: 'pointer',
-                      }}
-                      onClick={() => removeProduct(product.id)}
-                    >
+                    </button>
+                    <button onClick={() => removeProduct(product.id)}>
                       REMOVE
+                    </button>
+                  </div>
+                  <div className='dataContainer'>
+                    <div>
+                      <span>Title:</span> <span>{product?.title}</span>
+                    </div>
+                    <div>
+                      <span>Price:</span> <span>{product?.price}</span>
+                    </div>
+                    <div>
+                      <span>Quantity:</span> <span>{product?.quantity}</span>
                     </div>
                   </div>
-
-                  <p>Title: {product?.title}</p>
-                  <p>Price: {product?.price}</p>
-                  <p>Quantity: {product?.quantity}</p>
                 </li>
               );
             })}

@@ -3,7 +3,7 @@ export default {
   addProduct: '/add-product',
   editProduct: '/edit-product',
   deleteProduct: '/delete-product',
-  getProductById: '/getProduct?productId=id',
+  getProductById: '/getProduct?productId=',
   auth: {
     login: '/login',
     signIn: '/signUp',

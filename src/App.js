@@ -6,6 +6,7 @@ import EditProduct from './components/EditProduct';
 import AuthPage from './components/AuthPage';
 import NoMatch from './components/NoMatch';
 import { ProtectedRoute } from './components/ProtectedRoute';
+import Home from './components/Home';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path='/auth' element={<AuthPage />} />
           <Route element={<ProtectedRoute />}>
+            <Route path='/' element={<Home />} />
             <Route path='/add-product' element={<AddProduct />} />
             <Route path='/products' element={<ProductsList />} />
             <Route path='/edit-product/:id' element={<EditProduct />} />

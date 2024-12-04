@@ -22,9 +22,9 @@ const EditProductComponent = () => {
         );
 
         if (response) {
-          setTitle(response.data.title);
-          setPrice(response.data.price);
-          setQuantity(response.data.quantity);
+          setTitle(response.title);
+          setPrice(response.price);
+          setQuantity(response.quantity);
         }
       } catch (err) {
         console.log(err);

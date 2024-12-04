@@ -49,3 +49,24 @@ const apiRequest = async (method, url, data = null, headers = {}) => {
 };
 
 export default apiRequest;
+
+// Error Handling Interceptor
+apiClient.interceptors.response.use(
+  (response) => response, // Pass through successful responses
+  (error) => {
+    if (error.response && error.response.status === 400) {
+      console.error('Bad request:', error);
+    }
+    if (error.response && error.response.status === 403) {
+      console.log('Unauthorized access, redirecting...');
+      window.location = '/auth'; // Example: Redirect to login page
+    }
+    if (error.response && error.response.status === 404) {
+      console.log('Url not exist');
+    }
+    if (error.response && error.response.status === 500) {
+      console.log('Server error');
+    }
+    return Promise.reject(error);
+  }
+);

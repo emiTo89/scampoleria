@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router';
 import endpoints from '../api/endpoints/endpoints';
@@ -7,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../store/reducers/userReducer';
 
 const AuthPage = () => {
-  const user = useSelector((store) => store.user);
+  const user = useSelector((store) => store.user?.user);
 
   const [loggedin, setLoggedin] = useState(false);
   const [signin, setSignin] = useState(false);
@@ -48,7 +47,7 @@ const AuthPage = () => {
   };
 
   return user ? (
-    <Navigate to='/products' replace />
+    <Navigate to='/' replace />
   ) : (
     <div
       style={{

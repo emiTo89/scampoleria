@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import { useSelector } from 'react-redux';
 
 export const ProtectedRoute = () => {
-  const user = useSelector((store) => store.user);
+  const user = useSelector((store) => store.user?.user);
 
   return !user ? (
     <Navigate to='/auth' replace />
