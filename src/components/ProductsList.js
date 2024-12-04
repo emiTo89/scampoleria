@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import apiRequest from '../api';
 import endpoints from '../api/endpoints/endpoints';
@@ -9,7 +9,20 @@ const ProductsList = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const getProducts = async () => {
+  const getProducts = useCallback(async () => {
+    try {
+      const response = await apiRequest('GET', endpoints.getProducts);
+      console.log(response);
+      setData(response);
+    } catch (err) {
+      console.log(err);
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  /*   const getProducts = async () => {
     try {
       const response = await apiRequest('GET', endpoints.getProducts);
       console.log(response);
@@ -21,7 +34,7 @@ const ProductsList = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }; */
 
   const removeProduct = async (id) => {
     try {
@@ -38,11 +51,13 @@ const ProductsList = () => {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [getProducts]);
 
   const goToEditPage = (id) => {
     navigate(`/edit-product/${id}`);
   };
+
+  console.log(error);
 
   return (
     <>
