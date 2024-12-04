@@ -2,7 +2,7 @@
   "name": "scampoleria",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://emiTo89.github.io",
+  "homepage": "http://emiTo89.github.io/scampoleria",
   "dependencies": {
     "@reduxjs/toolkit": "^2.4.0",
     "@testing-library/jest-dom": "^5.17.0",
