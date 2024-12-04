@@ -11,7 +11,7 @@ import Home from './components/Home';
 const App = () => {
   return (
     <div className='App'>
-      <Router>
+      <Router basename='/scampoleria'>
         <Routes>
           <Route path='/auth' element={<AuthPage />} />
           <Route element={<ProtectedRoute />}>
