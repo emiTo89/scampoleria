@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/scampoleria/static/css/main.0723686c.css",
-    "main.js": "/scampoleria/static/js/main.71742392.js",
+    "main.js": "/scampoleria/static/js/main.95bd2745.js",
     "index.html": "/scampoleria/index.html",
     "main.0723686c.css.map": "/scampoleria/static/css/main.0723686c.css.map",
-    "main.71742392.js.map": "/scampoleria/static/js/main.71742392.js.map"
+    "main.95bd2745.js.map": "/scampoleria/static/js/main.95bd2745.js.map"
   },
   "entrypoints": [
     "static/css/main.0723686c.css",
-    "static/js/main.71742392.js"
+    "static/js/main.95bd2745.js"
   ]
 }
