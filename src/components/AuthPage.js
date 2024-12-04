@@ -38,9 +38,14 @@ const AuthPage = () => {
         email,
         password,
       });
+      console.log(response);
 
-      dispatch(login(response));
-      navigate('/products', { replace: true });
+      if (response?.error) {
+        window.alert("User doesn't exist");
+      } else {
+        dispatch(login(response));
+        navigate('/products', { replace: true });
+      }
     } catch (error) {
       console.log(error);
     }

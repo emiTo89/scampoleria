@@ -62,7 +62,7 @@ const ProductsList = () => {
   return (
     <>
       {loading ? <h5>Products are loading...</h5> : null}
-      {data && (
+      {data && data.length && (
         <div
           style={{
             width: '100%',

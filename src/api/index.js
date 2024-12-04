@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create Axios Instance
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8081',
+  baseURL: 'https://localhost:8081',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -37,7 +37,7 @@ const apiRequest = async (method, url, data = null, headers = {}) => {
     console.error('API Error:', error);
 
     if (error.status === 403 || error.status === 401) {
-      window.location = '/auth';
+      window.location = '/scampoleria/auth';
     }
 
     return {
@@ -59,7 +59,7 @@ apiClient.interceptors.response.use(
     }
     if (error.response && error.response.status === 403) {
       console.log('Unauthorized access, redirecting...');
-      window.location = '/auth'; // Example: Redirect to login page
+      window.location = '/scampoleria/auth'; // Example: Redirect to login page
     }
     if (error.response && error.response.status === 404) {
       console.log('Url not exist');
